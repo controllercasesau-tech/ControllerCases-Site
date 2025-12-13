@@ -390,6 +390,75 @@ form .btn {
 .form-note {
   margin-bottom: 50px;
 }
+
+/* =========================
+   PRICING + ORDER ALIGNMENT
+   ========================= */
+
+.pricing-list,
+.order-list {
+  list-style: none;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+/* shared row alignment */
+.pricing-list li,
+.order-list li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  column-gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* pricing bullet */
+.pricing-list .bullet {
+  width: 18px;
+  height: 18px;
+  background: var(--orange);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.pricing-list strong {
+  color: #fff;
+}
+
+/* order step number */
+.order-list .step {
+  width: 28px;
+  height: 28px;
+  background: #2a2a2a;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA row spacing for order section */
+.order-ctas {
+  margin-top: 30px;
+}
+
+/* Mobile tightening */
+@media (max-width: 700px) {
+  .pricing-list,
+  .order-list {
+    font-size: 1rem;
+  }
+
+  .pricing-list li,
+  .order-list li {
+    margin-bottom: 12px;
+  }
+}
 </style>
 </head>
 
@@ -501,39 +570,41 @@ form .btn {
 </section>
 
 
-  <!--================
-      PRICING
-    ================-->
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div style="text-align:center; max-width:600px; margin:0 auto; color:var(--text-muted); font-size:1.1rem;">
-      <p>🟧 Base Case: <strong style="color:white;">$9.99</strong></p>
-      <p>🟧 8BitDo Zero 2: <strong style="color:white;">$29.99</strong></p>
-      <p>🟧 8BitDo Zero 2 + Case Bundle: <strong style="color:white;">$34.99</strong></p>
-      <p>🟧 Name Personalisation: <strong style="color:white;">+ $3</strong></p>
-      <p>🟧 Shipping (AusPost): <strong style="color:white;">$4</strong></p>
-      <p>🟧 Pickup: <strong style="color:white;">Perth / UWA</strong></p>
-    </div>
-  </section>
+ <!--================
+    PRICING
+  ================-->
+<section id="pricing">
+  <h2>Pricing</h2>
 
-  <!--================
-      ORDER
-    ================-->
-  <section id="order">
-    <h2>How to Order</h2>
-    <div style="max-width:650px; margin:0 auto; text-align:center; color:var(--text-muted);">
-      <p>1️⃣ Choose your case (8BitDo Zero 2 / JoyCon / Other)</p>
-      <p>2️⃣ Pick a colour</p>
-      <p>3️⃣ Add custom name/engraving</p>
-      <p>4️⃣ DM us or email your order</p>
-      <p>5️⃣ We’ll confirm print time & pickup/shipping</p>
+  <ul class="pricing-list">
+    <li><span class="bullet"></span><span>Base Case: <strong>$9.99</strong></span></li>
+    <li><span class="bullet"></span><span>8BitDo Zero 2: <strong>$29.99</strong></span></li>
+    <li><span class="bullet"></span><span>8BitDo Zero 2 + Case Bundle: <strong>$34.99</strong></span></li>
+    <li><span class="bullet"></span><span>Name Personalisation: <strong>+$3</strong></span></li>
+    <li><span class="bullet"></span><span>Shipping (AusPost): <strong>$4</strong></span></li>
+    <li><span class="bullet"></span><span>Pickup: <strong>Perth / UWA</strong></span></li>
+  </ul>
+</section>
 
-      <div class="btn-row" style="margin-top:30px;">
-        <a class="btn btn-orange" href="https://instagram.com/ControllerCases" target="_blank">Order via Instagram</a>
-        <a class="btn btn-outline" href="mailto:controllercasesau@gmail.com">Order via Email</a>
-      </div>
-    </div>
-  </section>
+<!--================
+    ORDER
+  ================-->
+<section id="order">
+  <h2>How to Order</h2>
+
+  <ol class="order-list">
+    <li><span class="step">1</span><span>Choose your case (8BitDo Zero 2 / JoyCon / Other)</span></li>
+    <li><span class="step">2</span><span>Pick a colour</span></li>
+    <li><span class="step">3</span><span>Add custom name / engraving</span></li>
+    <li><span class="step">4</span><span>DM us or email your order</span></li>
+    <li><span class="step">5</span><span>We’ll confirm print time & pickup / shipping</span></li>
+  </ol>
+
+  <div class="btn-row order-ctas">
+    <a class="btn primary" href="https://instagram.com/ControllerCases" target="_blank" rel="noopener">Order via Instagram</a>
+    <a class="btn outline" href="mailto:controllercasesau@gmail.com">Order via Email</a>
+  </div>
+</section>
 
   <!--================
       CONTACT

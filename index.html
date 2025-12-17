@@ -459,6 +459,57 @@ form .btn {
     margin-bottom: 12px;
   }
 }
+
+/* =========================
+   COLOURS AVAILABLE
+   ========================= */
+
+.colours-note {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.colour-grid {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.colour-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 22px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.colour-card .label {
+  font-size: 0.95rem;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+/* Swatches */
+.swatch {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+/* Active colours */
+.swatch.white { background: #f2f2f2; }
+.swatch.grey  { background: #7a7a7a; }
+.swatch.pink  { background: #f3a6c8; }
+
 </style>
 </head>
 
@@ -569,6 +620,36 @@ form .btn {
   </div>
 </section>
 
+<!--================
+    COLOURS AVAILABLE
+  ================-->
+<section id="colours">
+  <h2>Colours Available</h2>
+
+  <p class="colours-note">
+    Printed in high-quality PLA+. Matte finish by default.
+    Availability may vary — please confirm when ordering.
+  </p>
+
+  <div class="colour-grid">
+
+    <div class="colour-card">
+      <span class="swatch white"></span>
+      <span class="label">Matte White</span>
+    </div>
+
+    <div class="colour-card">
+      <span class="swatch grey"></span>
+      <span class="label">Stone Grey</span>
+    </div>
+
+    <div class="colour-card">
+      <span class="swatch pink"></span>
+      <span class="label">Soft Pink</span>
+    </div>
+
+  </div>
+</section>
 
  <!--================
     PRICING

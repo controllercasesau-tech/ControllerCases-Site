@@ -105,15 +105,34 @@ nav a:hover {
   color: #ccc;
 }
 
+.hero-guidance {
+  margin-top: 60px;   /* was likely ~14px */
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}
+
 /* =========================
    BUTTONS
    ========================= */
 
 .btn-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  max-width: 520px;
+  margin: 0 auto;
+
+  align-items: center;
+}
+
+.btn-row .btn {
+  min-height: 100px;              /* forces equal height */
+  display: flex;
+  align-items: center;           /* vertical centering */
+  justify-content: center;       /* horizontal centering */
+  text-align: center;
 }
 
 .btn {
@@ -590,6 +609,11 @@ details {
     <a href="mailto:controllercasesau@gmail.com" class="btn btn-outline">Order via Email</a>
     <a href="anki-controllers.html" class="btn btn-outline">Using Controllers with Anki</a>
 </div>
+
+  <p class="hero-guidance">
+    Fastest option: use the <strong>Order Form</strong> below.  
+    Instagram and Email are also available.
+  </p>
 
   </div>
 

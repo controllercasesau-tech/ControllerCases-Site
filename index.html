@@ -531,15 +531,6 @@ footer{
 
 </head>
 
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav-links");
-
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
-  });
-</script>
 
 <body>
 
@@ -910,6 +901,16 @@ footer{
   <footer>
     © 2025 ControllerCases — Custom 3D-Printed Controller Cases, Perth WA
   </footer>
+
+<script>
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>
 
 </body>
 </html>
